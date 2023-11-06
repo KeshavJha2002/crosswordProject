@@ -61,10 +61,6 @@ private:
     int serverSocket;
     int serverPort;
 
-    // void sendFile(string filename) {
-
-    // }
-
     string login(string username, string hashedPassword) {
         ifstream userFile("registeredUsers.txt");
         if (userFile.is_open()) {
@@ -163,24 +159,6 @@ private:
     if (send(clientSocket, response.c_str(), response.length(), 0) < 0) {
         cerr << "Error sending response to client" << endl;
     }
-
-    // board logic here
-
-    // string filename;
-    // char filenameBuffer[32];
-    // bytesRead = recv(clientSocket, filenameBuffer, 32, 0);
-    // if (bytesRead < 0) {
-    //     cerr << "Error reading 'filename' from client" << endl;
-    //     close(clientSocket);
-    //     return;
-    // } else if (bytesRead == 0) {
-    //     cout << "Client disconnected" << endl;
-    //     close(clientSocket);
-    //     return;
-    // } else {
-    //     filename = filenameBuffer;
-    //     sendFile(filename);
-    // }
 
     // Closing the connection 
     close(clientSocket);

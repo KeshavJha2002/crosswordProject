@@ -171,8 +171,6 @@ private:
                 break;
         }
 
-        // send(clientSocket, filename.c_str(), 32, 0);
-
         crossword.open(filename);
         if (!crossword.is_open()) {
             cerr << "Error opening game board file: " << filename << endl;
