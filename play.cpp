@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <cstring>
+#include<sstream>
 #include "clue.hpp"
 #include "updatef.hpp"
 #include "showf.hpp"
@@ -55,24 +56,49 @@ void play(vector< vector<string>>& board, int words, vector<Clue>& clues, int x,
     }
 }
         cout << "\n";
-        do {
-            cout << "Enter -1 to exit\n";
-            cout << "Which clue do you want to solve?: ";
-            if (!(cin >> solve) || solve < 1) {
-                solve = 0;
-            }
-            if (solve == -1) {
-                return;
-            }
-            if (wasFound[solve - 1] == 1) {
-                cout << "That clue has been solved\n";
-                solve = 0;
-            }
-            else if (checkFound[solve - 1] == 0) {
-                cout << "That clue is invalid\n";
-                solve = 0;
-            }
-        } while (solve < 1 || solve > words);
+      do {
+    cout << "Enter -1 to exit\n";
+    cout << "Which clue do you want to solve?: ";
+
+    string input;
+    cin >> input;
+
+    // Validate input and handle invalid input
+    int solve;
+    stringstream ss(input);
+    if (ss >> solve) {
+        // Input is a valid number
+        if (solve == -1) {
+            return; // Handle exit condition
+        }
+
+        // Check clue validity and handle invalid clues
+        if (solve < 1 || solve > words) {
+            cout << "Invalid clue number\n";
+            solve = 0; // Reset solve variable
+            continue; // Continue loop iteration
+        }
+
+        // Check clue status and handle solved clues
+        if (wasFound[solve - 1] == 1) {
+            cout << "That clue has been solved\n";
+            solve = 0; // Reset solve variable
+            continue; // Continue loop iteration
+        }
+
+        // Check clue availability and handle unavailable clues
+        if (checkFound[solve - 1] == 0) {
+            cout << "That clue is invalid\n";
+            solve = 0; // Reset solve variable
+            continue; // Continue loop iteration
+        }
+    } else {
+        // Input is not a valid number
+        cout << "Invalid input. Please enter a number between 1 and " << words << " or -1 to exit." << endl;
+        solve = 0; // Reset solve variable
+    }
+} while (solve < 1 || solve > words || wasFound[solve - 1] == 1);
+
         cout << "Current hint: " << clues[solve - 1].clue << endl;
         cout << "Enter your solution: ";
         cin >> answer;
