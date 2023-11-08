@@ -1,11 +1,11 @@
 11 12 10
-H 1 1 DECIMAL The number system that consists of at most 10 digits
-H 6 1 ENCRYPTION In Symmetric Key Cryptography, same key can be used by the sender and receiver for ______ of the message.
-H 3 8 CACHE It is the fastest system memory
-H 1 10 BUG A unexpected problem with a software or hardware
-H 10 5 SOFTWARE Operating system is a type of system ___________
-V 1 1 DEVICES _____ are complete piece of hardware that starts with letter D
-V 4 3 VECTOR An implementation of linked list
-V 6 6 PYTHON Indentation is a special type of error in this programming language
-V 1 10 BACKEND A part of an application that allows it to operate but cannot be accessed by the user.
-V 9 10 PAN _____ is the computer network that connects computer/devices within the range of an individual person.
+H 1 1 DECIMAL The number system that consists of at most 10 digits(7)
+H 6 1 ENCRYPTION In Symmetric Key Cryptography, same key can be used by the sender and receiver for ______ of the message(10).
+H 3 8 CACHE It is the fastest system memory(5)
+H 1 10 BUG A unexpected problem with a software or hardware(3)
+H 10 5 SOFTWARE Operating system is a type of system ___________(8)
+V 1 1 DEVICES _____ are complete piece of hardware that starts with letter D(7)
+V 4 3 VECTOR An implementation of linked list(6)
+V 6 6 PYTHON Indentation is a special type of error in this programming language(6)
+V 1 10 BACKEND A part of an application that allows it to operate but cannot be accessed by the user.(7)
+V 9 10 PAN _____ is the computer network that connects computer/devices within the range of an individual person.(3)

@@ -1,11 +1,11 @@
 11 12 10
-H 1 7 STACK Which data structure follows the LIFO property?
-H 8 2 TREES A collection of nodes connected to each other by means of “edges”.
-H 7 7 GREEDY It is an approach for solving a problem by selecting the best option available at the moment.
-H 3 5 ARRAY It is a collection of elements.
-H 5 1 RECURSION A function that solves a particular problem by calling a copy of itself.
-V 1 2 QUEUE It is like a line waiting to purchase tickets.
-V 1 7 SORTING It is the process of arranging data into a meaningful order.
-V 6 10 SETS These are a collection of distinct elements.
-V 7 5 DEQUE Which data structure if you need to remove or add elements to the ends of a linear sequence?
-V 8 3 CHAR Which data type is used for the storage of letters in C++?
+H 1 7 STACK Which data structure follows the LIFO property?(5)
+H 8 2 TREES A collection of nodes connected to each other by means of “edges”.(5)
+H 7 7 GREEDY It is an approach for solving a problem by selecting the best option available at the moment.(6)
+H 3 5 ARRAY It is a collection of elements.(5)
+H 5 1 RECURSION A function that solves a particular problem by calling a copy of itself.(9)
+V 1 2 QUEUE It is like a line waiting to purchase tickets.(5)
+V 1 7 SORTING It is the process of arranging data into a meaningful order.(7)
+V 6 10 SETS These are a collection of distinct elements.(4)
+V 7 5 DEQUE Which data structure if you need to remove or add elements to the ends of a linear sequence?(5)
+V 8 3 CHAR Which data type is used for the storage of letters in C++?(4)
